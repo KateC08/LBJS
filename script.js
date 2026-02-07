@@ -5,3 +5,7 @@ let isLoggedIn = true
 
 let user = document.getElemendById("username").value;
 let pass = document.getElementById("password").value;
+
+function check() {
+
+}
