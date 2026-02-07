@@ -14,7 +14,7 @@ function checkU() {
         let found = false;
 
     for(let i = 0; i < users.length; i++) {
-        if(user == users[i].username && pass == users[i].password) {
+        if(user == users[i].username.toLowerCase() && pass == users[i].password.toLowerCase) {
             alert("Success! " + "Welcome, " + users[i].role)
             return;
         }
