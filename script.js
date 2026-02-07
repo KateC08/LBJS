@@ -2,23 +2,42 @@ let name = "katelyn"
 let num = 21
 let isLoggedIn = true
 
+function checkU() {
+    let users = [
+        {username: "Kate", password: "haha", role: "admin"},
+        {username: "Kie", password: "huhuhu", role: "guest"},
+        {username: "Keyt", password: "hmm", role: "staff"}
+    ]
+   
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+        let found = false;
 
-function checks() {
-    let actors = ["admin", "guest"]
-    let diffUsers = ["kate", "katya"]
-    let diffPass = ["qwerty12", "huhuhu11"]
-
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
-    let found = false;
-
-    for(let i = 0; i <= diffUsers.length; i++) {
-        if(user == diffUsers[i] && pass == diffPass[i]) {
-            alert("Welcome, " + actors[i])    
-            return;      
-        } 
+    for(let i = 0; i < users.length; i++) {
+        if(user == users[i].username && pass == users[i].password) {
+            alert("Success! " + "Welcome, " + users[i].role)
+            return;
+        }
     }
     alert("Failed")
+}
+
+function checks() {
+        let actors = ["admin", "guest"]
+        let diffUsers = ["kate", "katya"]
+        let diffPass = ["qwerty12", "huhuhu11"]
+
+        let user = document.getElementById("username").value;
+        let pass = document.getElementById("password").value;
+        let found = false;
+
+        for(let i = 0; i <= diffUsers.length; i++) {
+            if(user == diffUsers[i] && pass == diffPass[i]) {
+                alert("Welcome, " + actors[i])    
+                return;      
+            } 
+        }
+        alert("Failed")
 
 }
 
