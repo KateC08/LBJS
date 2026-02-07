@@ -1,7 +1,7 @@
-let user = "katelyn"
+let name = "katelyn"
 let num = 21
 let isLoggedIn = true
 
-let username = document.getElemendById("username").value;
 
-
+let user = document.getElemendById("username").value;
+let pass = document.getElementById("password").value;
