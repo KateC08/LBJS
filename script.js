@@ -16,6 +16,7 @@ function checkU() {
     for(let i = 0; i < users.length; i++) {
         if(user == users[i].username.toLowerCase() && pass == users[i].password.toLowerCase) {
             alert("Success! " + "Welcome, " + users[i].role)
+            document.getElementById("msg").innerText = "Welcome! " + users[i].role;
             return;
         }
     }
